@@ -1,0 +1,46 @@
+{
+	"working_dir": "${folder:${project_path:${file_path}}}",
+	"file_regex": "^(..[^:\n]*):([0-9]+):?([0-9]+)?:? (.*)$",
+
+	"keyfiles": ["Makefile", "makefile"],
+	"syntax": "Packages/nodegyp/nodegypOutput.sublime-syntax",
+
+	"variants":
+	[
+		{
+			"name": "build",
+			"shell_cmd": "node-gyp build"
+		},
+
+
+		{
+			"name": "configure",
+			"shell_cmd": "node-gyp configure"
+		},
+		{
+			"name": "Clean",
+			"shell_cmd": "node-gyp clean"
+		},
+		{
+			"name": "rebuild",
+			"shell_cmd": "node-gyp rebuild"
+		},
+		{
+			"name": "list",
+			"shell_cmd": "node-gyp list"
+		},
+		{
+			"name": "Run Test",
+			"shell_cmd": "node test.js"
+		},
+		{
+			"name": "build and run test",
+			"shell_cmd": "node-gyp build; node test.js"
+		},
+		{
+			"name": "Rebuild and run test",
+			"shell_cmd": "node-gyp rebuild; node test.js"
+		}
+	]
+
+}
